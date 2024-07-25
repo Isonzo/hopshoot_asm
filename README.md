@@ -1,0 +1,3 @@
+### Requirements
+- Raylib
+- FASM
