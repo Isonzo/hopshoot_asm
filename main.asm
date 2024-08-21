@@ -40,9 +40,11 @@ _start:
     ; Begin rendering cycle
     call BeginDrawing
 
-    mov qword rdi, BLACK
+    ; Draw base background
+    mov rdi, BLACK
     call ClearBackground
 
+    ; Message drawing
     mov rdi, message
     mov rsi, 190    ; x
     mov rdx, 200    ; y
@@ -50,6 +52,7 @@ _start:
     mov qword r8, LIGHTGRAY
     call DrawText
 
+    ; End rendering cycle
     call EndDrawing
 
     jmp main_loop
